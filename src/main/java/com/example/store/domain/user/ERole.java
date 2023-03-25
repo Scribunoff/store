@@ -1,4 +1,4 @@
-package com.example.store.domain;
+package com.example.store.domain.user;
 
 public enum ERole {
     ROLE_USER,

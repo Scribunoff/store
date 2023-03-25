@@ -1,6 +1,6 @@
 package com.example.store.mapper;
 
-import com.example.store.domain.User;
+import com.example.store.domain.user.User;
 import com.example.store.dto.UserDto;
 
 import org.mapstruct.Mapper;

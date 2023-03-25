@@ -1,6 +1,6 @@
 package com.example.store.security.service;
 
-import com.example.store.domain.User;
+import com.example.store.domain.user.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package com.example.store.security.service;
 
-import com.example.store.domain.User;
+import com.example.store.domain.user.User;
 import com.example.store.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

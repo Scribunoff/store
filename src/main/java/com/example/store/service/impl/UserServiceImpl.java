@@ -1,7 +1,7 @@
 package com.example.store.service.impl;
 
-import com.example.store.domain.ERole;
-import com.example.store.domain.User;
+import com.example.store.domain.user.ERole;
+import com.example.store.domain.user.User;
 import com.example.store.exception.UserNotFoundException;
 import com.example.store.payload.request.SignupRequest;
 import com.example.store.repository.UserRepository;

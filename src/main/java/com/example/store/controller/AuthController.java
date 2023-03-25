@@ -1,6 +1,6 @@
 package com.example.store.controller;
 
-import com.example.store.domain.User;
+import com.example.store.domain.user.User;
 import com.example.store.dto.validation.OnCreate;
 import com.example.store.mapper.UserMapper;
 import com.example.store.payload.request.LoginRequest;

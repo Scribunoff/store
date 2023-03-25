@@ -1,5 +1,7 @@
-package com.example.store.domain;
+package com.example.store.domain.user;
 
+import com.example.store.domain.image.Image;
+import com.example.store.domain.organization.Organization;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.*;
@@ -12,6 +14,7 @@ import org.hibernate.validator.constraints.Length;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 
@@ -37,6 +40,11 @@ public class User {
     private String password;
     @Transient
     private String confirmationPassword;
+
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "user", orphanRemoval = true)
+    private List<Organization> organizationList;
+
     @ElementCollection(fetch = FetchType.LAZY)
     @CollectionTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"))
@@ -47,6 +55,9 @@ public class User {
     private LocalDateTime createdData;
     @Column
     private boolean isLocked;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(referencedColumnName = "id")
+    private Image logo;
 }
 
 
